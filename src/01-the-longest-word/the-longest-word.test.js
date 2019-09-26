@@ -22,4 +22,3 @@ test(`getLongestWord(${mathPhrase}) should return "primeiros"`, () => {
     expect(actual).toBe(expected)
   }
 )
-

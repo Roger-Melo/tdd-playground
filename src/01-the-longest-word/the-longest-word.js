@@ -1,14 +1,6 @@
-const getLongestWord = (aString) => {
-  const words = aString.split(' ')
-  let longestWord = ''
-
-  for (let word of words) {
-    if (word.length > longestWord.length) {
-      longestWord = word
-    }
-  }
-
-  return longestWord
-}
+const getLongestWord = (aString) =>
+  aString
+    .split(/[\s,:;.?!()"']/gm)
+    .reduce((acc, curr) => acc.length >= curr.length ? acc : curr, '')
 
 export default getLongestWord
