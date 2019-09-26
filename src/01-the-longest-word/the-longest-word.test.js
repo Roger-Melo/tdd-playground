@@ -1,18 +1,7 @@
+import getLongestWord from './the-longest-word'
+
 const dancingPhrase = 'É proibido dançar agarrado mas se quiser, pode'
 const mathPhrase = '22 alunos entre os dez primeiros colocados'
-
-const getLongestWord = (aString) => {
-  const words = aString.split(' ')
-  let longestWord = ''
-
-  for (let word of words) {
-    if (word.length > longestWord.length) {
-      longestWord = word
-    }
-  }
-
-  return longestWord
-}
 
 test('getLongestWord should be a function', () => {
   expect(getLongestWord).toBeInstanceOf(Function)
