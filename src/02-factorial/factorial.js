@@ -1,11 +1,14 @@
-const getFactorial = num => {
-  let factorial = 1
+import errorMessage from './utils/error-message'
 
-  for (let i = num; i >= 1; i--) {
-    factorial = factorial * i
+const getFactorial = num => {
+  if (typeof num !== 'number') {
+    throw new TypeError(errorMessage)
   }
 
-  return factorial
+  const firstNumbers = [ 0, 1 ]
+  return firstNumbers.includes(num)
+    ? 1
+    : num * getFactorial(num - 1)
 }
 
 export default getFactorial
